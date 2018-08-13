@@ -21,10 +21,10 @@ LISTMR=`curl --silent "${HOST}projects/${CI_PROJECT_ID}/merge_requests?state=ope
 COUNTBRANCHES=`echo ${LISTMR} | grep -o "\"source_branch\":\"${CI_COMMIT_REF_NAME}\"" | wc -l`;
 
 if [ ${COUNTBRANCHES} -eq "0" ]; then
-    curl --silent -X POST "${HOST}projects/${CI_PROJECT_ID}/merge_requests" \
+    CREATED=`curl --silent -X POST "${HOST}projects/${CI_PROJECT_ID}/merge_requests" \
         --header "PRIVATE-TOKEN:${PRIVATE_TOKEN}" \
         --header "Content-Type: application/json" \
-        --data "${BODY}";
+        --data "${BODY}"`;
 
     echo "Opened a new merge request: WIP: ${CI_COMMIT_REF_NAME} and assigned to you.";
     exit;
