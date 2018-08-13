@@ -14,7 +14,7 @@ GitLab container to automatically create a new merge request on every push.
 
 # Usage
 
-You should use it at your .gitlab-ci.yml configuration.
+You should use it at your `.gitlab-ci.yml` configuration.
 
 ```
 stages:
