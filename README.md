@@ -1,6 +1,6 @@
 # Auto MR Opener
 
-This project is useful for auto creating MR on GitLab on every code push.
+GitLab container to automatically create a new merge request on every push.
 
 # Environment variables
 
@@ -10,7 +10,7 @@ This project is useful for auto creating MR on GitLab on every code push.
 | HOST | https://gitlab.com | You should set that when using a self hosted version | 
 | PRIVATE_TOKEN | | Get your token at `/profile/personal_access_tokens` | 
 | REMOVE_SOURCE_BRANCH | true | Remove source branch when commit is merged |
-| SQUASH | true | Creates an marge with squash |
+| SQUASH | true | Uses squash mode |
 
 # Usage
 
