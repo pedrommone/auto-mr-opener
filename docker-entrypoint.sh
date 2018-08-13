@@ -2,7 +2,7 @@
 
 # This script is mainly based on https://about.gitlab.com/2017/09/05/how-to-automatically-create-a-new-mr-on-gitlab-with-gitlab-ci/
 
-HOST=${HOST:="https://gitlab.com"}
+HOST=${HOST:="https://gitlab.com/"}
 TARGET_BRANCH=${TARGET_BRANCH:=master}
 
 BODY="{
